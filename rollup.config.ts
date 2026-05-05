@@ -5,7 +5,20 @@ import json from '@rollup/plugin-json';
 import terser from '@rollup/plugin-terser';
 import type {MergedRollupOptions} from 'rollup';
 
+const externalPackages = [
+  'countries-and-timezones',
+  'date-fns',
+  'date-fns-tz',
+  'dayjs',
+  'luxon',
+  'moment-timezone',
+];
+
 const config: MergedRollupOptions = {
+  external: (id) =>
+    externalPackages.some(
+      (package_) => id === package_ || id.startsWith(`${package_}/`),
+    ),
   input: {
     /* eslint-disable @typescript-eslint/naming-convention -- need to match the file names */
     'groupByOffset/index': 'src/groupByOffset/index.mts',
