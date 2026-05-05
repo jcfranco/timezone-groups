@@ -58,11 +58,6 @@ class NativeDateEngine implements DateEngine<Date> {
   }
 
   private _getFormatter(tz: string) {
-    // Workaround for https://issues.chromium.org/issues/381620359
-    if (tz === 'Factory') {
-      tz = 'Etc/GMT';
-    }
-
     let formatter = this._formatterCache.get(tz);
 
     if (!formatter) {
