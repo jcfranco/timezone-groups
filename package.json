@@ -61,14 +61,14 @@
     "LICENSE"
   ],
   "dependencies": {
-    "countries-and-timezones": "3.9.0"
+    "countries-and-timezones": "^3.9.0"
   },
   "peerDependencies": {
-    "date-fns": ">=4.0.0",
-    "date-fns-tz": ">=3.0.0",
-    "dayjs": ">=1.11.0",
-    "luxon": ">=3.0.0",
-    "moment-timezone": ">=0.5.0"
+    "date-fns": "^4.0.0",
+    "date-fns-tz": "^3.0.0",
+    "dayjs": "^1.11.0",
+    "luxon": "^3.0.0",
+    "moment-timezone": "^0.6.0"
   },
   "peerDependenciesMeta": {
     "date-fns": {
